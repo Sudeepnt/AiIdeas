@@ -161,9 +161,9 @@ export default function Home() {
                 <tr>
                   <th>Name</th>
                   <th>What it does</th>
-                  <th>ARR / MRR</th>
+                  <th className="hide-on-mobile">ARR / MRR</th>
                   <th>Category</th>
-                  <th>Audience</th>
+                  <th className="hide-on-mobile">Audience</th>
                   <th>Link</th>
                 </tr>
               </thead>
@@ -191,9 +191,9 @@ export default function Home() {
                       </div>
                     </td>
                     <td className="desc-cell">{tool.description}</td>
-                    <td>{tool.revenue ? <span className="badge">💰 {tool.revenue}</span> : <span className="text-muted">-</span>}</td>
+                    <td className="hide-on-mobile">{tool.revenue ? <span className="badge">💰 {tool.revenue}</span> : <span className="text-muted">-</span>}</td>
                     <td>{tool.category || <span className="text-muted">-</span>}</td>
-                    <td>{tool.audience || <span className="text-muted">-</span>}</td>
+                    <td className="hide-on-mobile">{tool.audience || <span className="text-muted">-</span>}</td>
                     <td>
                       <a href={tool.link} target="_blank" rel="noopener noreferrer" className="table-link" onClick={e => e.stopPropagation()}>
                         Visit

@@ -192,8 +192,8 @@ export default function Home() {
                     </td>
                     <td className="desc-cell">{tool.description}</td>
                     <td className="hide-on-mobile">{tool.revenue ? <span className="badge">💰 {tool.revenue}</span> : <span className="text-muted">-</span>}</td>
-                    <td>{tool.category || <span className="text-muted">-</span>}</td>
-                    <td className="hide-on-mobile">{tool.audience || <span className="text-muted">-</span>}</td>
+                    <td className="text-muted">{tool.category || '-'}</td>
+                    <td className="text-muted hide-on-mobile">{tool.audience || '-'}</td>
                     <td>
                       <a href={tool.link} target="_blank" rel="noopener noreferrer" className="table-link" onClick={e => e.stopPropagation()}>
                         Visit
